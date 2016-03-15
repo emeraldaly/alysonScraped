@@ -41,7 +41,8 @@ request('https://www.csmonitor.com', function (error, response, body) {
          //var articleLink = $(elem).attr('href');
          var insertedArticle = new Article({
           title: articleTitle,
-          //link: articleLink
+          //link: articleLink,
+          //summary : articleSummary
          });
          console.log(results);
     insertedArticle.save(function(err, dbArticle) {

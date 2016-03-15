@@ -3,8 +3,8 @@ $(document).ready(function(){
   response.forEach(function(Articles){
     var newTr = "<tr>";
     newTr += "<td>" + h3.story_headline + "</td>";
-    newTr += "<td>" + link + "</td>";
-    newTr += "<td>" + summary +"</td>";
+    newTr += "<td>" + span.story_link + "</td>";
+    newTr += "<td>" + p.story_summary +"</td>";
     newTr += "<td>" +
                 "<form action='/submit' method='post'>
                   <textarea type='text' name='body'>Write Note Here</textarea>
