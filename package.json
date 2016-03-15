@@ -1,0 +1,21 @@
+{
+  "name": "alyson_scrape_app",
+  "version": "1.0.0",
+  "description": "An app to scrape CS Monitor",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cheerio": "^0.20.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.7",
+    "morgan": "^1.7.0",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Alyson Wright",
+  "license": "ISC"
+}
