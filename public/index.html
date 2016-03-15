@@ -14,30 +14,35 @@
     <nav class="navbar navbar-default">
       <h1>Your news</h1>
     </nav>
-    <table id="list">
-      <thead>
-          <tr>
-            <th>Headline | </th>
-            <th>Link | </th>
-            <th>Summary | </th>
-            <th>Notes | </th>
-            <th>Delete</th>
+    <div class="row">
+      <table class="table table striped">
+        <thead>
+            <tr>
+              <th>Headline</th>
+              <th>Link</th>
+              <th>Summary</th>
+              <th>Notes</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>  
+            <tr>
+              <td><p>Title Here</p></td>
+              <td>Link here</td>
+              <td>Summary</td>
+              <td>
+                <form action="/submit" method="post">
+                  <textarea type="text" name="body">Write Note Here</textarea>
+                  <input class="btn btn-info" id="noteAdd" type="submit" value="Add Note">
+                </form>
+              </td>
+              <td>
+              <input class="btn btn-danger" id="delete" type="submit" value="Delete">
+              </td>
           </tr>
-        </thead>
-        <tbody>  
-          <tr>
-            <tb><p>Title Here</p></tb>
-            <tb>Link here</tb>
-            <tb>Summary</tb>
-            <tb>
-              <form action="/submit" method="post">
-                <textarea type="text" name="body">Write Note Here</textarea>
-                <input type="submit">
-              </form>
-            </tb>
-        </tr>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div> 
   </div>
       
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

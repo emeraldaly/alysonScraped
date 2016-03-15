@@ -33,6 +33,7 @@ db.once('open', function() {
 
 app.get('/', function(req, res){
 request('https://www.csmonitor.com', function (error, response, body) {
+  var results = [];
   if (!error && response.statusCode == 200) {
     var $ = cheerio.load(body);
     $('h3.story_headline', '#ui-page-contents').each(function(i, elem){
@@ -42,6 +43,7 @@ request('https://www.csmonitor.com', function (error, response, body) {
           title: articleTitle,
           //link: articleLink
          });
+         console.log(results);
     insertedArticle.save(function(err, dbArticle) {
       if(err) {
         console.log(err);
